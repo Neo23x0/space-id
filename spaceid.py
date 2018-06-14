@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.6
 
 __AUTHOR__ = 'Florian Roth'
-__VERSION__ = "0.1.0 June 2018"
+__VERSION__ = "0.2.0 June 2018"
 
 import sys
 import os
@@ -80,7 +80,7 @@ def generate_space_id(id):
     space_id = ""
     for i in id:
         num = ord(i)
-        space_id += "%s\n" % (' ' * num)
+        space_id += "%s\t" % (' ' * num)
     if args.debug:
         print("SPACE ID:")
         print(space_id.replace(" ", "*"))
@@ -94,7 +94,7 @@ def translate_space_id(space_id):
     :return id:
     """
     id = ""
-    lines = space_id.splitlines()
+    lines = space_id.split("\t")
     for line in lines:
         char = chr(len(line))
         id += char
@@ -117,7 +117,7 @@ if __name__ == '__main__':
                         metavar='path', default='')
     parser.add_argument('-i', help='ID (writes ID to file)', metavar='path', default='')
     parser.add_argument('-p', help='Preamble to start the space ID with', metavar='path',
-                        default="\n \n  \n   \n")
+                        default="\n\t \t  \t   \t")
     parser.add_argument('--remove', action='store_true', default=False, help='Remove space ID')
     parser.add_argument('--debug', action='store_true', default=False, help='Debug output')
 
