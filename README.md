@@ -17,7 +17,10 @@ Invisible Watermarks with Space Characters in ASCII Files
 
 ## Screenshots
 
+All Space ID actions
 ![Space ID Screenshot](https://github.com/Neo23x0/space-id/blob/master/screenshots/screen1.png "Space ID in action")
+
+ASCII file with an appended space ID
 ![Space ID Screenshot](https://github.com/Neo23x0/space-id/blob/master/screenshots/screen2.png "Space ID modified file")
 
 ## Examples
